@@ -121,7 +121,7 @@ h1, h2, h3, .display-font { font-family: 'Playfair Display', serif; }
   inset: 0;
   background:
     linear-gradient(135deg, rgba(42,31,120,.92) 45%, rgba(245,233,5,.18) 100%),
-    url('../images/group photo 1.JPG') center/cover no-repeat;
+    url('group photo 1.JPG') center/cover no-repeat;
 }
 .hero-content {
   position: relative;
