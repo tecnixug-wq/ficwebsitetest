@@ -687,8 +687,8 @@ section { padding: 5rem 0; }
   margin: 0 1rem 1.4rem 1rem;
   align-self: center;
   flex-shrink: 0;
-  background: var(--accent);
-  color: var(--dark);
+  background: var(--primary-light);
+  color: #fff;
   border: none;
   font-size: 0.85rem;
   font-weight: 700;
@@ -699,10 +699,10 @@ section { padding: 5rem 0; }
 }
 
 .member-card .btn:hover {
-  background: var(--accent2);
-  color: var(--dark);
+  background: var(--primary);
+  color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(245,233,5,0.3);
+  box-shadow: 0 4px 12px rgba(26,17,84,0.3);
 }
 
 /* Leadership Cards (Patron & Chairperson) */
@@ -822,8 +822,8 @@ section { padding: 5rem 0; }
   margin: 0 1rem 1.4rem 1rem !important;
   align-self: center;
   flex-shrink: 0;
-  background: var(--accent) !important;
-  color: var(--dark) !important;
+  background: var(--primary-light) !important;
+  color: #fff !important;
   border: none !important;
   font-size: 0.85rem !important;
   font-weight: 700 !important;
@@ -834,10 +834,10 @@ section { padding: 5rem 0; }
 }
 
 .team-card .btn:hover {
-  background: var(--accent2) !important;
-  color: var(--dark) !important;
+  background: var(--primary) !important;
+  color: #fff !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(245,233,5,0.3) !important;
+  box-shadow: 0 4px 12px rgba(26,17,84,0.3) !important;
 }
 
 /* Leadership Card (Team Lead) */
