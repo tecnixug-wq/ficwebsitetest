@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQs – FIC</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/jpeg" href="images/fic logo.jpg" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .faq-item { margin-bottom: 1rem; }
+    .faq-question { background: var(--light); padding: 1.2rem; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--primary); display: flex; justify-content: space-between; align-items: center; transition: background .2s; }
+    .faq-question:hover { background: rgba(55,48,150,.08); }
+    .faq-answer { background: #fff; padding: 1.5rem; border-radius: 0 0 8px 8px; color: var(--text); line-height: 1.75; display: none; border: 1px solid #e0e0e0; border-top: none; }
+    .faq-item.active .faq-answer { display: block; }
+    .faq-item.active .faq-question { background: var(--primary); color: #fff; }
+    .faq-icon { transition: transform .3s; }
+    .faq-item.active .faq-icon { transform: rotate(180deg); }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <span><i class="fa-regular fa-envelope me-1"></i> <a href="mailto:info@ficsociety.org">info@ficsociety.org</a></span>
+      <span class="d-none d-md-inline"><i class="fa-solid fa-location-dot me-1"></i> St. Francis Chapel, Makerere University, Kampala</span>
+      <a href="https://wa.me/256760385392" target="_blank" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 0.25rem;"><i class="fab fa-whatsapp me-1" style="color: #25d366;"></i> +256 760 385 392 (WhatsApp)</a>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/fic logo.jpg" alt="FIC Logo" style="height: 100px; object-fit: contain;" />
+        <div class="brand-text">
+          <div class="name">Franciscan Investment</div>
+          <div class="tag">Cooperative Society Ltd</div>
+        </div>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html" style="font-weight: 700; color: var(--primary);">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About FIC</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="about.html">Who We Are</a></li>
+              <li><a class="dropdown-item" href="board.html">Board Members</a></li>
+              <li><a class="dropdown-item" href="team.html">Our Staff</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Products & Services</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="products.html">All Products</a></li>
+              <li><a class="dropdown-item" href="savings.html">Savings Products</a></li>
+              <li><a class="dropdown-item" href="loans.html">Loan Products</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+          <li class="nav-item"><a class="nav-link active" href="faqs.html">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Careers</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="careers.html?type=internship">Internship</a></li>
+              <li><a class="dropdown-item" href="careers.html?type=jobs">Jobs</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="btn-cta-gold" href="https://finhazi.com/login" target="_blank">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SMALL HERO -->
+  <section style="background: linear-gradient(135deg, rgba(42,31,120,.92) 45%, rgba(245,233,5,.18) 100%), url('images/group photo 2.JPG') center/cover no-repeat; min-height: 40vh; display: flex; align-items: center; color: #fff; position: relative;">
+    <div class="container">
+      <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">Frequently Asked Questions</h1>
+      <p style="font-size: 1.1rem; color: rgba(255,255,255,.85); max-width: 500px;">Find answers to common questions about FIC membership, products, and services</p>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section style="padding: 5rem 0;">
+    <div class="container">
+      <!-- MEMBERSHIP FAQs -->
+      <div class="row justify-content-center mb-5 fade-up">
+        <div class="col-lg-8">
+          <h2 style="font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">Membership</h2>
+          <div class="divider-leaf"></div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>How do I become a member of FIC?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              To become a member, you need to: (1) Complete a membership application form, (2) Pay the membership fee (UGX 20,000), (3) Make an initial share investment (starting from UGX 100,000 for Young Saver to UGX 500,000 for Adult/Joint/Group accounts), (4) Start your monthly savings commitment. Visit our office or contact us for more details and to start your membership journey.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What are the membership fee and investment amounts?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              Membership Fee: UGX 20,000 (one-time). Initial Share Investment: Depends on account type (Young Saver: 100K, Student: 200K, Adult/Joint/Group: 500K). Monthly Savings Commitment: 10K-50K depending on account type. You can increase your investment and savings anytime.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Can I have multiple accounts with FIC?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              Most members maintain one personal account. However, special arrangements can be made for different purposes (e.g., personal and group/business). Contact our Member Relations Officer to discuss your specific needs.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Can I open an account for my child?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              Yes! Our Young Saver Account is specifically designed for children (opened by parents/guardians). It has lower investment and savings requirements: UGX 100,000 investment and UGX 10,000 monthly savings. This helps inculcate savings discipline from an early age.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What happens if I miss my monthly savings?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              While we encourage consistent monthly savings, life happens. If you miss a payment, please contact us immediately to discuss your situation. We work with members to find solutions and keep their accounts in good standing. Regular defaulting may affect your loan eligibility.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAVINGS FAQs -->
+      <div class="row justify-content-center mb-5 fade-up">
+        <div class="col-lg-8">
+          <h2 style="font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">Savings Products</h2>
+          <div class="divider-leaf"></div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What is the difference between Regular Savings and other savings products?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              Regular Savings is your main account where monthly contributions go and where loan funds are disbursed. It's your primary gateway for all FIC finances. Other products (Time Deposit, Target Savings, Investment Units) are specialized accounts with different terms, returns, and purposes. You can maintain multiple savings products simultaneously.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>How do I earn interest on my savings?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              FIC offers returns through: (1) Loan Guarantee Savings with guaranteed returns, (2) Time Deposits with fixed interest rates (3-12 months), (3) Interest on Capital (mandatory for all, receives annual capital returns), (4) Investment Units with guaranteed income distribution. Contact us for current interest rates and returns.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Can I withdraw my savings anytime?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              Regular Savings: Withdraw anytime (subject to minimum balance requirements). Time Deposits: Only at maturity. Target Savings: 90-day cycle with penalties for early withdrawal. Investment Units: Non-withdrawable. Loan Guarantee Savings: Generally hold until loan is repaid. Specific terms are in your account agreement.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What are Investment Units and how do they work?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              Investment Units (IU) are non-withdrawable shares in FIC's investment pool that grow your wealth long-term. They guarantee annual returns and appreciate over time. You can build IUs through the "Save for Investment Units" product (annual conversion by Dec 31) or direct investment. Dividends are paid annually, reinvested to grow your IU holdings.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What happens to my savings if FIC faces financial difficulties?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              FIC is a registered cooperative with UGX 23 Billion+ in net assets as of Dec 2019. We maintain strict financial controls, reserve funds, and undergo regular audits. Member deposits are protected through our cooperative structure and regulatory oversight. Your savings are safe with FIC.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOANS FAQs -->
+      <div class="row justify-content-center mb-5 fade-up">
+        <div class="col-lg-8">
+          <h2 style="font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">Loans</h2>
+          <div class="divider-leaf"></div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What loan products does FIC offer?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              FIC offers 11 loan products: Business Loan, Salary Loan, Housing/Home Development, Asset Acquisition, Contract Financing, Trade Financing, Solar Loan, Agricultural Loan, Weekend Loan, Emergency Loan, School Fees Loan, and Home Finishing Loan. Each has different terms, rates, and eligibility requirements. Visit our loans page for detailed information.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>How much can I borrow?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              Loan amounts vary by product: Business loans typically up to 3x your total savings and Investment Units. Salary loans up to 5x for employed members. Maximum amounts also depend on your savings history, repayment capacity, and collateral. Contact our Credit Officers for personalized loan calculations.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What is the interest rate on loans?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              Interest rates vary by loan product and term. Standard loans have competitive rates (usually 2% processing fee + interest). Weekend loans are 2.5% flat monthly. Emergency loans are at double the normal rate due to urgency. Current rates are available from our Credit Officers. Rates are significantly lower than commercial banks!
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>How long does it take to get a loan?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              Salary loans: 2-3 days (quick approval). Standard loans: 5-7 business days (with proper documentation). Our streamlined process is much faster than banks. Weekend/Emergency loans are prioritized for quick approval. Approval depends on completeness of your application and our verification process.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What if I can't repay my loan on time?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              Contact our Credit Officer immediately if you anticipate difficulties. We work with members to reschedule payments or discuss solutions. However, late payments will incur penalties and may affect your credit standing with FIC. Grace periods are built into some loans (e.g., Agricultural has 6-month grace). Communication is key!
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Can I get a loan if I'm self-employed?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              Yes! Business Loans, Trade Financing, Contract Financing, Agricultural, and Solar loans are perfect for self-employed members and entrepreneurs. You'll need to provide evidence of income (tax returns, business registration, bank statements). Loan approval depends on your business stability and our assessment of repayment capacity.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INVESTMENTS FAQs -->
+      <div class="row justify-content-center mb-5 fade-up">
+        <div class="col-lg-8">
+          <h2 style="font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">Investment & Real Estate</h2>
+          <div class="divider-leaf"></div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What are Franciscan Villages?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              Franciscan Villages are FIC's planned residential communities developed for member investment and wealth building. We have 13+ estates strategically located around Kampala (Bethel I & II, Seeta, Busukuma, Buloba, Nabutiti, Konna, Namulaba, Kasengejje, Kiwenda, etc.). Each estate includes complete infrastructure: water, electricity, security, and access roads. Total portfolio is worth UGX 23 Billion+.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>How do I invest in real estate through FIC?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              You can purchase plots in Franciscan Villages estates by (1) paying through your FIC account directly, (2) taking an Asset Acquisition or Home Development Loan, or (3) using your saved Investment Units. Available projects include Bethel II, Konna, Namulaba, Kasengejje, and Kiwenda. Contact our office or visit our investment page for current prices and availability.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Are there financing options for real estate purchases?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              Yes! FIC offers: Asset Acquisition Loans (you deposit 25%, FIC acquires the property), Home Development Loans (up to 48 months), and flexible payment plans. You can also use your Investment Units or savings. Our rates are significantly better than commercial mortgages. Speak with our Credit Officers for personalized options.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What returns can I expect on my Investment Units?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              Investment Units provide guaranteed annual returns and capital appreciation through FIC's growing asset base (now UGX 23B+). Specific dividend rates vary based on FIC's annual financial performance. All dividends are reinvested to grow your IU holdings. This is a long-term wealth-building strategy, not short-term trading.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GENERAL FAQs -->
+      <div class="row justify-content-center fade-up">
+        <div class="col-lg-8">
+          <h2 style="font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">General Questions</h2>
+          <div class="divider-leaf"></div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Who founded FIC and when?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              FIC (Franciscan Investment Cooperative) was established in 2010 by members of St. Francis Chapel at Makerere University. Our community is founded on Catholic values: fairness, cooperation, and mutual support. We're a registered cooperative (Reg. No. 9897/RCS) under the Ministry of Trade, Industry and Co-operatives.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Is FIC regulated and secure?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              Yes! FIC is officially registered as a cooperative society and operates under strict regulatory oversight. We undergo regular audits, maintain substantial reserves, and have transparent financial reporting. Your deposits are protected through our cooperative structure, strong governance, and regulatory compliance.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What are FIC's core values?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              FIC operates on principles of: Cooperation (we achieve more together), Fairness (equitable treatment for all), Integrity (honesty in all dealings), Spirituality (guided by Catholic values), and Sustainability (long-term thinking). Everything we do is designed with your interests and our community's wellbeing in mind.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>How often does FIC conduct audits and report financials?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              FIC conducts annual independent audits and publishes financial statements yearly. Members have access to audited reports and can attend Annual General Meetings where financial performance is reviewed. This transparency ensures accountability and member confidence in our organization's management.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Can I get member support when I need it?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              Absolutely! Our Member Relations Officer and dedicated staff are available during office hours (Mon-Fri 8AM-5PM, Sat 9AM-1PM). You can visit our office at St. Francis Chapel, Makerere University, call +256 760 385 392, or email info@ficsociety.org. We're here to support your financial journey!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section style="background: var(--primary); color: #fff; padding: 3rem 0; text-align: center;">
+    <div class="container">
+      <h3 style="font-size: 1.8rem; font-weight: 600; margin-bottom: 1rem;">Didn't find your answer?</h3>
+      <p style="margin-bottom: 2rem; font-size: 1.05rem;">Our team is ready to help. Get in touch with us directly.</p>
+      <a href="contact.html" class="btn-cta-gold">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-logo">
+            <img src="images/fic logo.jpg" alt="FIC Logo" style="height: 90px; object-fit: contain;" />
+            <div>
+              <div class="name">Franciscan Investment</div>
+              <div class="tag">Cooperative Society Ltd</div>
+            </div>
+          </div>
+          <p>A community of like-minded individuals from St. Francis Chapel, Makerere University, bound by a common goal of economic prosperity and spiritual transformation since 2010.</p>
+          <p class="mt-2" style="font-size:.78rem;">Reg. 9897/RCS · Ministry of Trade, Industry and Co-operatives</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>About</h6>
+          <ul class="footer-links">
+            <li><a href="about.html">Who We Are</a></li>
+            <li><a href="board.html">Board Members</a></li>
+            <li><a href="team.html">Our Staff</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Products</h6>
+          <ul class="footer-links">
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="savings.html">Savings</a></li>
+            <li><a href="loans.html">Loans</a></li>
+            <li><a href="membership.html">Membership</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Support</h6>
+          <ul class="footer-links">
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="membership.html">Newsletter</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Careers</h6>
+          <ul class="footer-links">
+            <li><a href="careers.html?type=internship">Internships</a></li>
+            <li><a href="careers.html?type=jobs">Jobs</a></li>
+            <li><a href="contact.html">Get in Touch</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <p>© 2024 Franciscan Investment Cooperative Society Ltd. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/franciscan-investment-cooperative-society-fic-ltd/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/256760385392" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <!-- FLOATING BUTTONS -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/256760385392" target="_blank" class="floating-btn floating-whatsapp" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <button class="floating-btn floating-top hidden" id="backToTop" title="Back to Top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script>
+    function toggleFAQ(element) {
+      const faqItem = element.closest('.faq-item');
+      faqItem.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

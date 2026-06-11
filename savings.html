@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Savings Products – FIC</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/jpeg" href="images/fic logo.jpg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <span><i class="fa-regular fa-envelope me-1"></i> <a href="mailto:info@ficsociety.org">info@ficsociety.org</a></span>
+      <span class="d-none d-md-inline"><i class="fa-solid fa-location-dot me-1"></i> St. Francis Chapel, Makerere University, Kampala</span>
+      <a href="https://wa.me/256760385392" target="_blank" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 0.25rem;"><i class="fab fa-whatsapp me-1" style="color: #25d366;"></i> +256 760 385 392 (WhatsApp)</a>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/fic logo.jpg" alt="FIC Logo" style="height: 100px; object-fit: contain;" />
+        <div class="brand-text">
+          <div class="name">Franciscan Investment</div>
+          <div class="tag">Cooperative Society Ltd</div>
+        </div>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html" style="font-weight: 700; color: var(--primary);">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About FIC</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="about.html">Who We Are</a></li>
+              <li><a class="dropdown-item" href="board.html">Board Members</a></li>
+              <li><a class="dropdown-item" href="team.html">Our Staff</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Products & Services</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="products.html">All Products</a></li>
+              <li><a class="dropdown-item" href="savings.html">Savings Products</a></li>
+              <li><a class="dropdown-item" href="loans.html">Loan Products</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+          <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Careers</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="careers.html?type=internship">Internship</a></li>
+              <li><a class="dropdown-item" href="careers.html?type=jobs">Jobs</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="btn-cta-gold" href="https://finhazi.com/login" target="_blank">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SMALL HERO -->
+  <section style="background: linear-gradient(135deg, rgba(42,31,120,.92) 45%, rgba(245,233,5,.18) 100%), url('images/group photo 1.JPG') center/cover no-repeat; min-height: 40vh; display: flex; align-items: center; color: #fff; position: relative;">
+    <div class="container">
+      <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">Savings Accounts</h1>
+      <p style="font-size: 1.1rem; color: rgba(255,255,255,.85); max-width: 500px;">Build your financial future with our flexible and rewarding savings options</p>
+    </div>
+  </section>
+
+  <!-- SAVINGS ACCOUNTS -->
+  <section class="accounts-section">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-6 fade-up">
+          <span class="section-label">Save With Us</span>
+          <h2 class="section-title">Explore Savings Accounts</h2>
+          <div class="divider-leaf mx-auto"></div>
+          <p class="section-sub mx-auto">Start saving for tomorrow's dreams today with accounts tailored to every stage of life.</p>
+        </div>
+      </div>
+      <div class="fade-up">
+        <ul class="nav account-tab-nav justify-content-center" id="savingsTab" role="tablist">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab1">Regular Savings</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab2">Time Deposit</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab3">Target Savings</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab4">Investment Units</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab5">Loan Guarantee</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab6">Interest on Capital</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab7">Save for IU</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="tab1">
+            <div class="account-detail">
+              <div class="row align-items-center g-4">
+                <div class="col-md-7">
+                  <h4>Regular Savings Account</h4>
+                  <div class="divider-leaf"></div>
+                  <p>Upon becoming a member, you automatically sign up for a regular savings product. In this product you commit to make a minimum monthly savings deposit (amount resolved by AGM). All other deposits, withdrawals, loan repayments, and purchases of investment units flow through this account. This is your gateway for all funds received by FIC and through which you receive all benefits.</p>
+                  <div class="mt-3">
+                    <span class="feature-pill">Mandatory for Members</span>
+                    <span class="feature-pill">Monthly Deposits</span>
+                    <span class="feature-pill">Flexible Access</span>
+                    <span class="feature-pill">Member Dividends</span>
+                  </div>
+                  <div class="mt-4 p-3" style="background:rgba(55,48,150,.06); border-left:4px solid var(--primary);">
+                    <strong style="color:var(--primary);">Key Details:</strong>
+                    <ul style="font-size:.9rem; margin-top:0.5rem; color:var(--text);">
+                      <li>Minimum: Resolved by AGM from time to time</li>
+                      <li>Interest: Competitive rates approved by AGM</li>
+                      <li>Gateway for all member transactions</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-5 text-center">
+                  <div style="background:rgba(27,67,50,.06); border-radius:1rem; padding:2rem;">
+                    <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400&h=200&fit=crop" alt="Regular Savings" style="height: 80px; width: 100%; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                    <div style="font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--text); font-weight:700;">Monthly Commitment</div>
+                    <div style="font-size:1rem; color:var(--muted); margin-top:.4rem;">Build your foundation</div>
+                    <a href="membership.html" class="btn btn-member mt-3 d-inline-block">Open Account</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tab2">
+            <div class="account-detail">
+              <div class="row align-items-center g-4">
+                <div class="col-md-7">
+                  <h4>Time Deposit Savings</h4>
+                  <div class="divider-leaf"></div>
+                  <p>Lock in your savings for a fixed term and enjoy higher interest rates than regular accounts. In this account your deposit is fixed for an agreed predetermined period and interest rate. Ideal for members with lump-sum funds they wish to grow without touching for a defined period.</p>
+                  <div class="mt-3">
+                    <span class="feature-pill">Higher Interest Rates</span>
+                    <span class="feature-pill">Fixed Terms</span>
+                    <span class="feature-pill">3-12 Months</span>
+                    <span class="feature-pill">Guaranteed Returns</span>
+                  </div>
+                  <div class="mt-4 p-3" style="background:rgba(55,48,150,.06); border-left:4px solid var(--primary);">
+                    <strong style="color:var(--primary);">Key Details:</strong>
+                    <ul style="font-size:.9rem; margin-top:0.5rem; color:var(--text);">
+                      <li>Minimum Period: 3 months</li>
+                      <li>Maximum Period: 12 months</li>
+                      <li>Interest Rate: Fixed at opening per Board policy</li>
+                      <li>Negotiable minimum threshold</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-5 text-center">
+                  <div style="background:rgba(27,67,50,.06); border-radius:1rem; padding:2rem;">
+                    <img src="https://images.unsplash.com/photo-1590080892917-f2119edc519f?w=400&h=200&fit=crop" alt="Time Deposit" style="height: 80px; width: 100%; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                    <div style="font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--text); font-weight:700;">Fixed Returns</div>
+                    <div style="font-size:.9rem; color:var(--muted); margin-top:.4rem;">Earn more in 3-12 months</div>
+                    <a href="membership.html" class="btn btn-member mt-3 d-inline-block">Open Account</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tab3">
+            <div class="account-detail">
+              <div class="row align-items-center g-4">
+                <div class="col-md-7">
+                  <h4>Target Savings Account</h4>
+                  <div class="divider-leaf"></div>
+                  <p>Save for a particular specified purpose with targeted withdrawals. Whether it's for a holiday, vehicle, property deposit, or any other goal, this account helps you stay disciplined. Withdrawals are allowed once every 90 days to keep you on track toward your goal.</p>
+                  <div class="mt-3">
+                    <span class="feature-pill">Goal-Oriented</span>
+                    <span class="feature-pill">90-Day Withdrawal Cycle</span>
+                    <span class="feature-pill">Disciplined Saving</span>
+                    <span class="feature-pill">Purpose-Driven</span>
+                  </div>
+                  <div class="mt-4 p-3" style="background:rgba(55,48,150,.06); border-left:4px solid var(--primary);">
+                    <strong style="color:var(--primary);">Key Details:</strong>
+                    <ul style="font-size:.9rem; margin-top:0.5rem; color:var(--text);">
+                      <li>Withdrawal Frequency: Once per 90 days</li>
+                      <li>Extra Withdrawal Charge: Applied for withdrawals within 90 days</li>
+                      <li>Penalty fees: As determined by Board</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-5 text-center">
+                  <div style="background:rgba(27,67,50,.06); border-radius:1rem; padding:2rem;">
+                    <img src="https://images.unsplash.com/photo-1592065191116-0ba6dde5c9c1?w=400&h=200&fit=crop" alt="Target Savings" style="height: 80px; width: 100%; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                    <div style="font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--text); font-weight:700;">Your Goal. Your Timeline.</div>
+                    <div style="font-size:.9rem; color:var(--muted); margin-top:.4rem;">Save strategically</div>
+                    <a href="membership.html" class="btn btn-member mt-3 d-inline-block">Open Account</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tab4">
+            <div class="account-detail">
+              <div class="row align-items-center g-4">
+                <div class="col-md-7">
+                  <h4>Investment Units</h4>
+                  <div class="divider-leaf"></div>
+                  <p>These are non-withdrawable savings made with FIC for long-term investment purposes. You give instructions in writing to transfer your ordinary savings into investment units. This product attracts a guaranteed return on investment as shall be approved by the AGM from time to time. Perfect for members thinking long-term.</p>
+                  <div class="mt-3">
+                    <span class="feature-pill">Long-term Growth</span>
+                    <span class="feature-pill">Non-Withdrawable</span>
+                    <span class="feature-pill">Guaranteed Returns</span>
+                    <span class="feature-pill">Wealth Building</span>
+                  </div>
+                  <div class="mt-4 p-3" style="background:rgba(55,48,150,.06); border-left:4px solid var(--primary);">
+                    <strong style="color:var(--primary);">Key Details:</strong>
+                    <ul style="font-size:.9rem; margin-top:0.5rem; color:var(--text);">
+                      <li>Non-withdrawable for duration</li>
+                      <li>Guaranteed return as approved by AGM</li>
+                      <li>Written instruction required to transfer</li>
+                      <li>Perfect for long-term wealth accumulation</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-5 text-center">
+                  <div style="background:rgba(27,67,50,.06); border-radius:1rem; padding:2rem;">
+                    <img src="https://images.unsplash.com/photo-1460925895917-adf4e5a0527e?w=400&h=200&fit=crop" alt="Investment Units" style="height: 80px; width: 100%; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                    <div style="font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--text); font-weight:700;">Build Wealth</div>
+                    <div style="font-size:.9rem; color:var(--muted); margin-top:.4rem;">Long-term guaranteed growth</div>
+                    <a href="membership.html" class="btn btn-member mt-3 d-inline-block">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tab5">
+            <div class="account-detail">
+              <div class="row align-items-center g-4">
+                <div class="col-md-7">
+                  <h4>Loan Guarantee Savings</h4>
+                  <div class="divider-leaf"></div>
+                  <p>This savings product forms part of the collateral for members who secure their loans with minimum required savings. It provides security for your loan while helping you continue building your savings safety net. As a borrower, maintaining this account is essential.</p>
+                  <div class="mt-3">
+                    <span class="feature-pill">Loan Collateral</span>
+                    <span class="feature-pill">Security Reserve</span>
+                    <span class="feature-pill">For Borrowers</span>
+                    <span class="feature-pill">Safety Net</span>
+                  </div>
+                  <div class="mt-4 p-3" style="background:rgba(55,48,150,.06); border-left:4px solid var(--primary);">
+                    <strong style="color:var(--primary);">Key Details:</strong>
+                    <ul style="font-size:.9rem; margin-top:0.5rem; color:var(--text);">
+                      <li>Used as loan collateral</li>
+                      <li>Minimum amounts determined by Board</li>
+                      <li>Required for loan security</li>
+                      <li>Protected interest earnings</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-5 text-center">
+                  <div style="background:rgba(27,67,50,.06); border-radius:1rem; padding:2rem;">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=200&fit=crop" alt="Loan Guarantee" style="height: 80px; width: 100%; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                    <div style="font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--text); font-weight:700;">Secure Your Loan</div>
+                    <div style="font-size:.9rem; color:var(--muted); margin-top:.4rem;">Loan guarantee protection</div>
+                    <a href="membership.html" class="btn btn-member mt-3 d-inline-block">Get a Loan</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tab6">
+            <div class="account-detail">
+              <div class="row align-items-center g-4">
+                <div class="col-md-7">
+                  <h4>Interest on Capital Savings</h4>
+                  <div class="divider-leaf"></div>
+                  <p>This is a mandatory savings product for all FIC members. Its primary purpose is to facilitate the payment of interest on capital that has been mobilized from members. This account helps distribute returns fairly across the membership base and ensures transparent capital management.</p>
+                  <div class="mt-3">
+                    <span class="feature-pill">Mandatory for Members</span>
+                    <span class="feature-pill">Capital Returns</span>
+                    <span class="feature-pill">Interest Distribution</span>
+                    <span class="feature-pill">Transparent</span>
+                  </div>
+                  <div class="mt-4 p-3" style="background:rgba(55,48,150,.06); border-left:4px solid var(--primary);">
+                    <strong style="color:var(--primary);">Key Details:</strong>
+                    <ul style="font-size:.9rem; margin-top:0.5rem; color:var(--text);">
+                      <li>Required account for all members</li>
+                      <li>Receives interest on capital mobilized</li>
+                      <li>Transparent capital management tool</li>
+                      <li>Automatic deposits per Board decisions</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-5 text-center">
+                  <div style="background:rgba(27,67,50,.06); border-radius:1rem; padding:2rem;">
+                    <img src="https://images.unsplash.com/photo-1552821206-cf20e9d70d2c?w=400&h=200&fit=crop" alt="Interest on Capital" style="height: 80px; width: 100%; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                    <div style="font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--text); font-weight:700;">Earn Returns</div>
+                    <div style="font-size:.9rem; color:var(--muted); margin-top:.4rem;">Fair capital distribution</div>
+                    <a href="membership.html" class="btn btn-member mt-3 d-inline-block">Join FIC</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tab7">
+            <div class="account-detail">
+              <div class="row align-items-center g-4">
+                <div class="col-md-7">
+                  <h4>Save for Investment Units</h4>
+                  <div class="divider-leaf"></div>
+                  <p>Build toward long-term wealth with this non-withdrawable savings product designed specifically for purchasing investment units. During the year, you make regular deposits into this account, and by December 31st, these funds automatically convert into investment units. This account earns returns over and above ordinary savings.</p>
+                  <div class="mt-3">
+                    <span class="feature-pill">Year-End Conversion</span>
+                    <span class="feature-pill">Higher Returns</span>
+                    <span class="feature-pill">Long-term Growth</span>
+                    <span class="feature-pill">Automatic IU Purchase</span>
+                  </div>
+                  <div class="mt-4 p-3" style="background:rgba(55,48,150,.06); border-left:4px solid var(--primary);">
+                    <strong style="color:var(--primary);">Key Details:</strong>
+                    <ul style="font-size:.9rem; margin-top:0.5rem; color:var(--text);">
+                      <li>Converts to Investment Units by Dec 31st</li>
+                      <li>Earns premium returns above regular savings</li>
+                      <li>Non-withdrawable during year</li>
+                      <li>Builds long-term investment portfolio</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-5 text-center">
+                  <div style="background:rgba(27,67,50,.06); border-radius:1rem; padding:2rem;">
+                    <img src="https://images.unsplash.com/photo-1533563671038-c23fdc3c3548?w=400&h=200&fit=crop" alt="Save for IU" style="height: 80px; width: 100%; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                    <div style="font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--text); font-weight:700;">Grow for Tomorrow</div>
+                    <div style="font-size:.9rem; color:var(--muted); margin-top:.4rem;">Automatic wealth building</div>
+                    <a href="membership.html" class="btn btn-member mt-3 d-inline-block">Start Saving</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-logo">
+            <img src="images/fic logo.jpg" alt="FIC Logo" style="height: 90px; object-fit: contain;" />
+            <div>
+              <div class="name">Franciscan Investment</div>
+              <div class="tag">Cooperative Society Ltd</div>
+            </div>
+          </div>
+          <p>A community of like-minded individuals from St. Francis Chapel, Makerere University, bound by a common goal of economic prosperity and spiritual transformation since 2010.</p>
+          <p class="mt-2" style="font-size:.78rem;">Reg. 9897/RCS · Ministry of Trade, Industry and Co-operatives</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>About</h6>
+          <ul class="footer-links">
+            <li><a href="about.html">Who We Are</a></li>
+            <li><a href="board.html">Board Members</a></li>
+            <li><a href="team.html">Our Staff</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Products</h6>
+          <ul class="footer-links">
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="savings.html">Savings</a></li>
+            <li><a href="loans.html">Loans</a></li>
+            <li><a href="membership.html">Membership</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Support</h6>
+          <ul class="footer-links">
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="membership.html">Newsletter</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Careers</h6>
+          <ul class="footer-links">
+            <li><a href="careers.html?type=internship">Internships</a></li>
+            <li><a href="careers.html?type=jobs">Jobs</a></li>
+            <li><a href="contact.html">Get in Touch</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <p>© 2024 Franciscan Investment Cooperative Society Ltd. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/franciscan-investment-cooperative-society-fic-ltd/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/256760385392" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <!-- FLOATING BUTTONS -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/256760385392" target="_blank" class="floating-btn floating-whatsapp" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <button class="floating-btn floating-top hidden" id="backToTop" title="Back to Top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
