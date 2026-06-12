@@ -53,6 +53,7 @@
               <li><a class="dropdown-item" href="products.html">All Products</a></li>
               <li><a class="dropdown-item" href="savings.html">Savings Products</a></li>
               <li><a class="dropdown-item" href="loans.html">Loan Products</a></li>
+              <li><a class="dropdown-item" href="investments.html">Investments</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
@@ -110,94 +111,6 @@
             <a href="FIC_ADULT_STUDENT_APPLICATION_FORM.pdf" class="list-group-item list-group-item-action" download>
               <i class="fa-solid fa-file-pdf me-2" style="color: #e74c3c;"></i> Adult Student Application Form
             </a>
-          </div>
-        </div>
-
-        <!-- FAQS SECTION -->
-        <div class="col-lg-6 fade-up">
-          <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 2rem; color: var(--primary);">Frequently Asked Questions</h3>
-          <div class="accordion" id="faqAccordion">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                  How do I become a member?
-                </button>
-              </h2>
-              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  Contact us at <a href="mailto:info@ficsociety.org">info@ficsociety.org</a> or visit our offices. Fill out the membership application form and complete the verification process.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                  What is the minimum savings amount?
-                </button>
-              </h2>
-              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  Our Regular Savings Account requires a minimum monthly contribution of UGX 20,000. Other account types have different requirements.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                  How do I apply for a loan?
-                </button>
-              </h2>
-              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  Complete a loan application form, provide required documentation, and our loan committee will review your application within 7-10 business days.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                  What interest rates apply to loans?
-                </button>
-              </h2>
-              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  Interest rates vary by loan type and duration. Contact us for specific rate information tailored to your needs.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- DOCUMENTS SECTION -->
-      <div class="row mb-5 fade-up">
-        <div class="col-12">
-          <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 2rem; color: var(--primary);">Important Documents</h3>
-          <div class="row g-3">
-            <div class="col-md-6 col-lg-4">
-              <div class="product-card text-center">
-                <div class="product-icon"><i class="fa-solid fa-book"></i></div>
-                <h5>FIC Constitution</h5>
-                <p>Our governance framework and member rights</p>
-                <a href="#" class="btn btn-primary btn-sm">Download</a>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="product-card text-center">
-                <div class="product-icon"><i class="fa-solid fa-handshake"></i></div>
-                <h5>Terms & Conditions</h5>
-                <p>General terms for membership and services</p>
-                <a href="#" class="btn btn-primary btn-sm">Download</a>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="product-card text-center">
-                <div class="product-icon"><i class="fa-solid fa-chart-pie"></i></div>
-                <h5>Annual Report</h5>
-                <p>Latest financial statements and performance</p>
-                <a href="#" class="btn btn-primary btn-sm">Download</a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -258,7 +171,8 @@
       </div>
       <hr class="footer-divider" />
       <div class="footer-bottom">
-        <p>© 2026 Franciscan Investment Cooperative Society Ltd. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Franciscan Investment Cooperative Society Ltd. All rights reserved.</p>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
         <div class="social-links">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>

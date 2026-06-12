@@ -53,6 +53,7 @@
               <li><a class="dropdown-item" href="products.html">All Products</a></li>
               <li><a class="dropdown-item" href="savings.html">Savings Products</a></li>
               <li><a class="dropdown-item" href="loans.html">Loan Products</a></li>
+              <li><a class="dropdown-item" href="investments.html">Investments</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
@@ -92,28 +93,9 @@
           <p class="section-sub mx-auto">Memorable moments from FIC events, meetings, and community activities.</p>
         </div>
       </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4 fade-up">
-          <div class="product-card text-center">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80" alt="Event" style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem;" />
-            <h5>Community Event</h5>
-            <p>Members gathering for financial literacy session</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 fade-up">
-          <div class="product-card text-center">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80" alt="Event" style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem;" />
-            <h5>AGM Session</h5>
-            <p>Annual General Meeting with member participation</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 fade-up">
-          <div class="product-card text-center">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80" alt="Event" style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem;" />
-            <h5>Staff Meeting</h5>
-            <p>Team coordination and planning session</p>
-          </div>
-        </div>
+      <div>
+        <h2 class="gallery-category fade-up">Page under development</h2>
+      </div>
       </div>
     </div>
   </section>
@@ -172,7 +154,8 @@
       </div>
       <hr class="footer-divider" />
       <div class="footer-bottom">
-        <p>© 2024 Franciscan Investment Cooperative Society Ltd. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Franciscan Investment Cooperative Society Ltd. All rights reserved.</p>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
         <div class="social-links">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>

@@ -53,6 +53,7 @@
               <li><a class="dropdown-item" href="products.html">All Products</a></li>
               <li><a class="dropdown-item" href="savings.html">Savings Products</a></li>
               <li><a class="dropdown-item" href="loans.html">Loan Products</a></li>
+              <li><a class="dropdown-item" href="investments.html">Investments</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link active" href="news.html">News</a></li>
@@ -92,45 +93,80 @@
           <p class="section-sub">Financial tips, FIC updates, and insights to help you make smarter financial decisions.</p>
         </div>
       </div>
-      <div class="row g-4">
-        <div class="col-md-4 fade-up">
-          <div class="news-card">
-            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80" alt="Savings" />
-            <div class="news-card-body">
-              <div class="news-cat">Savings Tips</div>
-              <h6>Financial Stability: Building a Strong Savings Habit for a Secure Future</h6>
-              <p>Financial stability is the cornerstone of a secure and prosperous future. One of the key pillars is cultivating a consistent savings habit...</p>
-              <div class="news-meta"><i class="fa-regular fa-calendar me-1"></i> FIC Editorial Team</div>
-            </div>
+      <div class="row g-4" id="blog-posts-container">
+        <div class="col-12 text-center" style="padding: 3rem 0;">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading posts...</span>
           </div>
-        </div>
-        <div class="col-md-4 fade-up">
-          <div class="news-card">
-            <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&q=80" alt="Investment" />
-            <div class="news-card-body">
-              <div class="news-cat">Investment</div>
-              <h6>Investing Is Not Just About Money: Securing a Brighter Financial Future</h6>
-              <p>Investing is not just about money; it's about securing a brighter future and achieving financial freedom. At FIC, we believe in the power...</p>
-              <div class="news-meta"><i class="fa-regular fa-calendar me-1"></i> FIC Editorial Team</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 fade-up">
-          <div class="news-card">
-            <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=600&q=80" alt="Health" />
-            <div class="news-card-body">
-              <div class="news-cat">Wellbeing</div>
-              <h6>The Importance of Safeguarding What Matters: Health and Financial Wellbeing</h6>
-              <p>In life, nothing is more precious than the health and well-being of our loved ones. At FIC, we understand the importance of safeguarding...</p>
-              <div class="news-meta"><i class="fa-regular fa-calendar me-1"></i> FIC Editorial Team</div>
-            </div>
-          </div>
+          <p style="margin-top: 1rem; color: var(--muted);">Loading latest posts...</p>
         </div>
       </div>
+
+      <script>
+        // Fetch WordPress blog posts from https://blog.ficsociety.org
+        async function loadBlogPosts() {
+          try {
+            const response = await fetch('https://blog.ficsociety.org/wp-json/wp/v2/posts?per_page=4&_embed');
+            const posts = await response.json();
+            
+            const container = document.getElementById('blog-posts-container');
+            container.innerHTML = ''; // Clear loading indicator
+            
+            if (!posts.length) {
+              container.innerHTML = '<div class="col-12 text-center"><p style="color: var(--muted);">No blog posts available.</p></div>';
+              return;
+            }
+            
+            posts.forEach(post => {
+              // Extract featured image
+              let featuredImage = 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80'; // Fallback
+              if (post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0]) {
+                featuredImage = post._embedded['wp:featuredmedia'][0].source_url;
+              }
+              
+              // Extract category
+              let category = 'News';
+              if (post._embedded && post._embedded['wp:term'] && post._embedded['wp:term'][0] && post._embedded['wp:term'][0].length > 0) {
+                category = post._embedded['wp:term'][0][0].name;
+              }
+              
+              // Clean excerpt (remove HTML tags)
+              const excerpt = post.excerpt.rendered.replace(/<[^>]*>/g, '').substring(0, 150) + '...';
+              
+              // Format date
+              const postDate = new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+              
+              // Create card HTML
+              const cardHTML = `
+                <div class="col-md-4 fade-up">
+                  <div class="news-card">
+                    <img src="${featuredImage}" alt="${post.title.rendered}" />
+                    <div class="news-card-body">
+                      <div class="news-cat">${category}</div>
+                      <h6><a href="${post.link}" target="_blank" style="text-decoration: none; color: inherit;">${post.title.rendered}</a></h6>
+                      <p>${excerpt}</p>
+                      <div class="news-meta"><i class="fa-regular fa-calendar me-1"></i> ${postDate}</div>
+                    </div>
+                  </div>
+                </div>
+              `;
+              
+              container.innerHTML += cardHTML;
+            });
+          } catch (error) {
+            console.error('Error loading blog posts:', error);
+            const container = document.getElementById('blog-posts-container');
+            container.innerHTML = '<div class="col-12"><p style="color: var(--muted); text-align: center;">Unable to load blog posts at this time. <a href="https://blog.ficsociety.org" target="_blank">Visit our blog directly</a></p></div>';
+          }
+        }
+        
+        // Load posts when page loads
+        document.addEventListener('DOMContentLoaded', loadBlogPosts);
+      </script>
     </div>
   </section>
 
-  <!-- FOOTER -->
+<!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="row g-5">
@@ -165,17 +201,6 @@
           </ul>
         </div>
         <div class="col-6 col-lg-2">
-          <h6>Resources</h6>
-          <ul class="footer-links">
-            <li><a href="news.html">News</a></li>
-            <li><a href="resources.html">Member Forms</a></li>
-            <li><a href="resources.html">Constitution</a></li>
-            <li><a href="resources.html">FAQs</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="https://finhazi.com/login" target="_blank">Login</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2">
           <h6>Support</h6>
           <ul class="footer-links">
             <li><a href="faqs.html">FAQs</a></li>
@@ -190,7 +215,18 @@
             <li><a href="careers.html?type=internship">Internships</a></li>
             <li><a href="careers.html?type=jobs">Jobs</a></li>
             <li><a href="contact.html">Get in Touch</a></li>
-          </ul>\n        </div>\n      </div>\n      <hr class=\"footer-divider\" />\n      <div class=\"footer-bottom\">\n        <p>© 2024 Franciscan Investment Cooperative Society Ltd. All rights reserved.</p>\n        <div class=\"social-links\">\n          <a href=\"#\"><i class=\"fab fa-facebook-f\"></i></a>\n          <a href=\"#\"><i class=\"fab fa-twitter\"></i></a>\n          <a href=\"#\"><i class=\"fab fa-instagram\"></i></a>\n          <a href=\"#\"><i class=\"fab fa-linkedin-in\"></i></a>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Franciscan Investment Cooperative Society Ltd. All rights reserved.</p>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/franciscan-investment-cooperative-society-fic-ltd/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin-in"></i></a>
           <a href="https://wa.me/256760385392" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>

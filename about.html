@@ -53,6 +53,7 @@
               <li><a class="dropdown-item" href="products.html">All Products</a></li>
               <li><a class="dropdown-item" href="savings.html">Savings Products</a></li>
               <li><a class="dropdown-item" href="loans.html">Loan Products</a></li>
+              <li><a class="dropdown-item" href="investments.html">Investments</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
@@ -74,7 +75,7 @@
   </nav>
 
   <!-- SMALL HERO -->
-  <section style="background: linear-gradient(135deg, rgba(42,31,120,.92) 45%, rgba(245,233,5,.18) 100%), url('/group photo 1.JPG') center/cover no-repeat; min-height: 40vh; display: flex; align-items: center; color: #fff; position: relative;">
+  <section style="background: linear-gradient(135deg, rgba(42,31,120,.92) 45%, rgba(245,233,5,.18) 100%), url('group photo 1.JPG') center/cover no-repeat; min-height: 40vh; display: flex; align-items: center; color: #fff; position: relative;">
     <div class="container">
       <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">Who We Are</h1>
       <p style="font-size: 1.1rem; color: rgba(255,255,255,.85); max-width: 500px;">Learn about FIC's mission, values, and commitment to our community</p>
@@ -87,7 +88,7 @@
       <div class="row align-items-center g-5">
         <div class="col-lg-5 fade-up">
           <div class="about-img-wrap">
-            <img src="https://images.unsplash.com/photo-1521791055366-0d553872952f?w=800&q=80" alt="FIC Community" />
+            <img src="Group photo 2.JPG" alt="FIC Staff" />
             <div class="about-badge">
               <div class="yr">15+</div>
               <div class="yrtext">Years of Service</div>
@@ -113,7 +114,7 @@
   </section>
 
   <!-- MISSION & VISION -->
-  <section style="background: linear-gradient(135deg, rgba(42,31,120,.95) 0%, rgba(90,77,176,.85) 100%); padding: 5rem 0; color: #fff;">
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); padding: 5rem 0; color: #fff;">
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-6 fade-up">
@@ -238,7 +239,8 @@
       </div>
       <hr class="footer-divider" />
       <div class="footer-bottom">
-        <p>© 2024 Franciscan Investment Cooperative Society Ltd. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Franciscan Investment Cooperative Society Ltd. All rights reserved.</p>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
         <div class="social-links">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>

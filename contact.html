@@ -53,6 +53,7 @@
               <li><a class="dropdown-item" href="products.html">All Products</a></li>
               <li><a class="dropdown-item" href="savings.html">Savings Products</a></li>
               <li><a class="dropdown-item" href="loans.html">Loan Products</a></li>
+              <li><a class="dropdown-item" href="investments.html">Investments</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
@@ -203,7 +204,7 @@
       <div class="row g-5">
         <div class="col-lg-4">
           <div class="footer-logo">
-            <img src="images/fic logo.jpg" alt="FIC Logo" style="height: 90px; object-fit: contain;" />
+            <img src="fic logo.jpg" alt="FIC Logo" style="height: 90px; object-fit: contain;" />
             <div>
               <div class="name">Franciscan Investment</div>
               <div class="tag">Cooperative Society Ltd</div>
@@ -250,7 +251,8 @@
       </div>
       <hr class="footer-divider" />
       <div class="footer-bottom">
-        <p>© 2024 Franciscan Investment Cooperative Society Ltd. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Franciscan Investment Cooperative Society Ltd. All rights reserved.</p>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
         <div class="social-links">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>

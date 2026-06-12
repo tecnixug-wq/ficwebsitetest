@@ -53,6 +53,7 @@
               <li><a class="dropdown-item" href="products.html">All Products</a></li>
               <li><a class="dropdown-item" href="savings.html">Savings Products</a></li>
               <li><a class="dropdown-item" href="loans.html">Loan Products</a></li>
+              <li><a class="dropdown-item" href="investments.html">Investments</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
@@ -137,52 +138,45 @@
       <div class="row justify-content-center text-center mb-5">
         <div class="col-lg-6 fade-up">
           <span class="section-label">Our Values</span>
-          <h2 class="section-title">Why Choose FIC?</h2>
+          <h2 class="section-title">What Drives FIC</h2>
           <div class="divider-leaf mx-auto"></div>
-          <p class="section-sub mx-auto">Every decision we make is guided by your best interests. Here's what sets us apart.</p>
+          <p class="section-sub mx-auto">At the core of everything we do are values that guide our decisions and interactions with our community.</p>
         </div>
       </div>
       <div class="row g-4">
         <div class="col-6 col-md-4 col-lg-2 fade-up">
           <div class="why-card">
-            <div class="why-icon"><i class="fa-solid fa-shield-halved"></i></div>
-            <h5>Trusted</h5>
-            <p>Registered with the Ministry of Trade, registered SACCO since 2010.</p>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-2 fade-up">
-          <div class="why-card">
             <div class="why-icon"><i class="fa-solid fa-heart"></i></div>
-            <h5>Community</h5>
-            <p>Rooted in the Franciscan values of care, compassion, and community.</p>
+            <h5>Christ-Centered</h5>
+            <p>Holistic development rooted in spiritual and faith-based principles.</p>
           </div>
         </div>
         <div class="col-6 col-md-4 col-lg-2 fade-up">
           <div class="why-card">
-            <div class="why-icon"><i class="fa-solid fa-percent"></i></div>
-            <h5>Competitive</h5>
-            <p>Attractive interest rates on savings and affordable loan rates for members.</p>
+            <div class="why-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h5>Integrity</h5>
+            <p>Honest and transparent in all our dealings and decisions.</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2 fade-up">
+          <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <h5>Professionalism</h5>
+            <p>Excellence and expert service delivery in all operations.</p>
           </div>
         </div>
         <div class="col-6 col-md-4 col-lg-2 fade-up">
           <div class="why-card">
             <div class="why-icon"><i class="fa-solid fa-bolt"></i></div>
-            <h5>Fast Access</h5>
-            <p>Quick loan processing with responses within 36 hours of application.</p>
+            <h5>Efficiency</h5>
+            <p>Optimal resource utilization and swift decision-making.</p>
           </div>
         </div>
         <div class="col-6 col-md-4 col-lg-2 fade-up">
           <div class="why-card">
             <div class="why-icon"><i class="fa-solid fa-handshake-angle"></i></div>
             <h5>Member Centric</h5>
-            <p>Profits returned to members as dividends at the end of each financial year.</p>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-2 fade-up">
-          <div class="why-card">
-            <div class="why-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-            <h5>Empowering</h5>
-            <p>Regular training and financial literacy sessions for all members.</p>
+            <p>Member interests and needs at the center of everything we do.</p>
           </div>
         </div>
       </div>
@@ -245,7 +239,7 @@
       <div class="row g-5">
         <div class="col-lg-4">
           <div class="footer-logo">
-            <img src="images/fic logo.jpg" alt="FIC Logo" style="height: 90px; object-fit: contain;" />
+            <img src="fic logo.jpg" alt="FIC Logo" style="height: 90px; object-fit: contain;" />
             <div>
               <div class="name">Franciscan Investment</div>
               <div class="tag">Cooperative Society Ltd</div>
@@ -295,7 +289,8 @@
       </div>
       <hr class="footer-divider" />
       <div class="footer-bottom">
-        <p>© 2024 Franciscan Investment Cooperative Society Ltd. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Franciscan Investment Cooperative Society Ltd. All rights reserved.</p>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
         <div class="social-links">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
